@@ -1,4 +1,7 @@
 language: c
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq libgmp-dev libssl-dev check
 script: ./configure && make && make check
 compiler:
   - clang
